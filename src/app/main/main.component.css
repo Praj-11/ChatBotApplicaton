@@ -1,0 +1,27 @@
+.main_layout{
+  display: block;
+  background-color: limegreen;
+  box-shadow: dimgray;
+
+  border-width: 2px;
+  border-radius: 1px;
+  border-color: dimgray;
+}
+
+.contacts_bar{
+  height: 88vh;
+  margin: 0;
+}
+
+.chat_layout{
+  height: 88vh;
+}
+
+.img-thumbnail{
+  border-radius: 100px;
+  width: 55px;
+  height: 55px;
+}
+input[type = 'search']{
+  border-radius: 50px;
+}
