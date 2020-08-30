@@ -1,76 +1,32 @@
-<div class="row">
-  <div class="d-none d-md-block col-4 col-md-12 bg-primary" style="height: 100vh; width: 100vw;">
-    <div class="container col-12 col-md-8 offset-sm-2 mt-sm-5 mb-sm-5 main_layout ">
-      <div class="row">
-        <div class="card col-1 col-md-4 contacts_bar">
-          <nav class="navbar navbar-dark  navbar-expand-md d-block d-sm-none">
-            <button class="navbar-toggler bg-dark" type="button" data-target = "#Navbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
+<div class="d-none d-xl-block position-fixed h-100 w-100" style=" background-color: #cbbed8"></div>
+<div class="row  pageAdjust">
+    <div class="container col-12 col-xl-10 offset-xl-1 mt-xl-5 mb-xl-5 main_layout ">
+      <div class="row ml-1 ml-xl-0 mr-1 mr-xl-0">
+        <div class="card col-5 col-xl-3 contacts_bar">
           <div class="show" id="Navbar">
             <ul class="navbar-nav">
               <li class="nav-item row">
                 <a class="nav-link card-header w-100">
-                  <img class="card-img img-thumbnail ml-3" [src]="userDetails.userProfilePic">
+                  <img class="card-img img-thumbnail ml-3" [src]="userDetails.userPhotoURL" style="width: 40px; height: 40px;">
                 </a>
               </li>
               <li class="nav-item row">
-                <input type = "search" placeholder="search" class="w-100 m-2">
+                <input type = "search" placeholder="search" class="w-100 m-xl-3 m-4 text-black">
               </li>
               <li class="nav-item row mt-0">
                   <ul class="list-group w-100" >
-                    <li class="list-group-horizontal list-unstyled justify-content-center" *ngFor="let person of userDetails.chatsHistory; let i = index;"><button class="btn chat_button w-100 text-left" (click)="showMessage(person, i)">
-                      <img src="{{person.profilePic}}" class="card-img img-thumbnail">
-                      <label class="text-left justify-content-center ml-4">{{person.name}}</label></button><br>
+                    <li class="list-group-horizontal list-unstyled justify-content-center" *ngFor="let person of userDetails.chatHistory; let i = index;"><button class="btn chat_button w-100 text-left" (click)="showMessage(person, i)">
+                      <img src="{{person.photoURL}}" class="d-none d-sm-inline card-img img-thumbnail">
+                      <label class="text-left justify-content-center ml-4 contacts_name text-white">{{person.name}}</label></button><br>
                     </li>
                   </ul>
               </li>
             </ul>
           </div>
         </div>
-        <div class="card col-8 col-md-8 chat_layout">
+        <div class="card col-7 col-xl-9 chat_layout">
           <app-chat-layout [database]="chats" (addMessageEvent)="addNewMessage($event)"></app-chat-layout>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-<!--<div class="d-block d-md-none">-->
-<!--  <div class="row">-->
-<!--    <div class="card col-4 contacts_bar">-->
-<!--      <nav class="card-header navbar navbar-dark">-->
-<!--        <button class="navbar-toggler bg-dark img-thumbnail" type="button" data-target = "#Navbar" (click)="toggleNavbar()">-->
-<!--          <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--      </nav>-->
-<!--      <div class="collapse navbar-collapse show" [ngClass]="{'show': navbarOpen}">-->
-<!--        <ul class="navbar-nav">-->
-<!--          <li class="nav-item row">-->
-<!--            <a class="nav-link card-header w-100">-->
-<!--              <img class="card-img img-thumbnail ml-3" [src]="userDetails.userProfilePic">-->
-<!--            </a>-->
-<!--          </li>-->
-<!--          <li class="nav-item row">-->
-<!--            <input type = "search" placeholder="search" class="w-100 m-2">-->
-<!--          </li>-->
-<!--          <li class="nav-item row mt-0">-->
-<!--            <ul class="list-group w-100" >-->
-<!--              <li class="list-group-horizontal list-unstyled justify-content-center" *ngFor="let person of userDetails.chatsHistory"><button class="btn chat_button w-100 text-left" (click)="showMessage(person)">-->
-<!--                <img src="{{person.profilePic}}" class="card-img img-thumbnail">-->
-<!--                <label class="text-left justify-content-center ml-4">{{person.name}}</label></button><br>-->
-<!--              </li>-->
-<!--            </ul>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="card col-8 chat_layout ">-->
-<!--      <app-chat-layout [database]="chats"></app-chat-layout>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->

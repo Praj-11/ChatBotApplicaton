@@ -14,7 +14,7 @@ export class ChatLayoutComponent implements OnInit {
 
   constructor() {
     console.log(this.database);
-    this.newMessage = 'Enter Message';
+    this.newMessage = '';
   }
 
   ngOnInit(): void {
@@ -25,17 +25,12 @@ export class ChatLayoutComponent implements OnInit {
     const currentDate = new Date();
 
     const newChat = {
-      date: {
-        chatDate: currentDate.getDate(),
-        time: {
-          status: 's',
-          messages: {
-            chatTime: currentDate.getTime(),
-            message: this.newMessage
-          }
-        }
-      }
+      status: 's',
+      message: this.newMessage
     };
     this.addMessageEvent.emit(newChat);
+
+    this.newMessage = '';
+
   }
 }

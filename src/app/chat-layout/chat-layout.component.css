@@ -14,12 +14,16 @@
 .card-header{
   height: 59px;
   margin: 0;
+  background-color: #ffffff;
 }
 
 .card-body{
   overflow-y: auto;
   height: 73vh;
+  background-color: #f3f4f9;
 }
+
+
 
 .list-group{
   border: 0;
@@ -28,10 +32,22 @@
 .message_box {
 
   min-width: 5vw;
-  max-width: 20vw;
+  max-width: 30vw;
+  border-radius: 30px;
+}
+
+@media (max-width: 1300px) {
+  .message_box{
+    max-width: 35vw;
+  }
 }
 
 .text_bar{
-  border-radius: 5px;
+  border-radius: 10px;
   height: 39px;
 }
+
+.text_submit_button{
+
+}
+
