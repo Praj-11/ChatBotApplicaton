@@ -5,18 +5,19 @@
     </div>
 
   <div class="card-body">
-    <ul>
-      <li *ngFor="let chat of database.chats" class="list-unstyled">
-        <div class="card float-left" *ngIf="chat.date.time.status == 'r'">
-          <span class="justify-content-center">{{chat.date.time.messages.message}}</span>
+    <ul class="list-group list-unstyled">
+      <li *ngFor="let chat of database.chats" class="m-2">
+        <div class="card float-left message_box" *ngIf="chat.date.time.status == 'r'">
+          <span class="justify-content-center m-2">{{chat.date.time.messages.message}}</span>
         </div>
-        <div class="card float-right" *ngIf="chat.date.time.status == 's'">
-          <span class="justify-content-center">{{chat.date.time.messages.message}}</span>
+        <div class="card float-right " *ngIf="chat.date.time.status == 's'">
+          <span class="justify-content-center text-right message_box">{{chat.date.time.messages.message}}</span>
         </div>
        </li>
     </ul>
   </div>
-  <div class="card-footer">
-
+  <div class="card-footer mb-5" >
+    <input type="text" class="col-10 text_bar" [(ngModel)]="newMessage">
+    <button (click)="addMessage()">Submit</button>
   </div>
 </div>

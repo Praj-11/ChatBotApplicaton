@@ -10,6 +10,7 @@ export class MainComponent implements OnInit {
   search: string;
   userDetails: any;
   chats: any;
+  currIndex: number;
 
   constructor() {
 
@@ -30,23 +31,401 @@ export class MainComponent implements OnInit {
               }
             }
           }
-        }]
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 'r',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii'
+              }
+            }
+          }
+        }, {
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 's',
+              messages: {
+                chatTime: '01:23',
+                message: 'Helo'
+              }
+            }
+          }
+        }, ]
       }, {
       name: 'Rohan',
       profilePic: 'https://api.adorable.io/avatars/20',
-      chats: {
+      chats: [{
         date: {
           chatDate: '29-08-2020',
           time: {
-            status: 'r',
+            status: 's',
             messages: {
               chatTime: '01:23',
-              message: 'Hii'
+              message: 'Hello'
             }
           }
         }
-      }
-    }]
+      }]
+    },{
+        name: 'Prajwal Agarwal Agarwal Prajwal',
+        profilePic: 'https://api.adorable.io/avatars/40',
+        chats: [{
+          date: {
+            chatDate: '29-08-2020',
+            time: {
+              status: 's',
+              messages: {
+                chatTime: '01:23',
+                message: 'Hello'
+              }
+            }
+          }
+        }]
+      }]
     };
   }
 
@@ -57,7 +436,14 @@ export class MainComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
 
   }
-  showMessage(person) {
+  showMessage(person, index: number) {
     this.chats = person;
+    this.currIndex = index;
+  }
+
+  addNewMessage(newMessageObject: any){
+    this.userDetails.chatsHistory[this.currIndex].chats.push(newMessageObject);
+
+    console.log(this.userDetails.chatsHistory[this.currIndex]);
   }
 }

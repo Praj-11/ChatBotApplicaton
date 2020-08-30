@@ -20,7 +20,7 @@
               </li>
               <li class="nav-item row mt-0">
                   <ul class="list-group w-100" >
-                    <li class="list-group-horizontal list-unstyled justify-content-center" *ngFor="let person of userDetails.chatsHistory"><button class="btn chat_button w-100 text-left" (click)="showMessage(person)">
+                    <li class="list-group-horizontal list-unstyled justify-content-center" *ngFor="let person of userDetails.chatsHistory; let i = index;"><button class="btn chat_button w-100 text-left" (click)="showMessage(person, i)">
                       <img src="{{person.profilePic}}" class="card-img img-thumbnail">
                       <label class="text-left justify-content-center ml-4">{{person.name}}</label></button><br>
                     </li>
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="card col-8 col-md-8 chat_layout">
-          <app-chat-layout [database]="chats"></app-chat-layout>
+          <app-chat-layout [database]="chats" (addMessageEvent)="addNewMessage($event)"></app-chat-layout>
         </div>
       </div>
     </div>

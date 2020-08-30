@@ -15,3 +15,23 @@
   height: 59px;
   margin: 0;
 }
+
+.card-body{
+  overflow-y: auto;
+  height: 73vh;
+}
+
+.list-group{
+  border: 0;
+}
+
+.message_box {
+
+  min-width: 5vw;
+  max-width: 20vw;
+}
+
+.text_bar{
+  border-radius: 5px;
+  height: 39px;
+}
