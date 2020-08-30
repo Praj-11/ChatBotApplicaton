@@ -1,7 +1,7 @@
-<div  *ngIf="database != undefined">
+<div  class="page_adjust" *ngIf="database != undefined">
   <div class="mt-0 justify-content-center"><button class="btn chat_button w-100 text-left card-header">
       <img [src]="database.photoURL" class="card-img img-thumbnail">
-      <label class="text-left justify-content-center ml-4">{{database.name}}</label></button><br>
+      <label class="d-none d-sm-inline text-left justify-content-center ml-4">{{database.name}}</label></button><br>
     </div>
 
   <div class="card-body">
@@ -11,13 +11,14 @@
           <span class="justify-content-center text-left m-3 message">{{chat.message}}</span>
         </div>
         <div class="card float-right message_box" *ngIf="chat.status == 's'">
-          <span class="justify-content-center text-right m-3 message ">{{chat.message}}</span>
+          <span class="justify-content-center text-right m-3 message">{{chat.message}}</span>
         </div>
        </li>
     </ul>
   </div>
-  <div class="card-footer mb-5" >
-    <input type="text" class="col-10 text_bar" placeholder="Enter Message" [(ngModel)]="newMessage">
-    <button (click)="addMessage()" class="text_submit_button"><span></span></button>
+  <div class="card-footer" >
+    <input type="text" class="col-8 col-sm-10 text_bar" placeholder="Enter Message" [(ngModel)]="newMessage">
+    <button (click)="addMessage()" class="float-right offset-1 text_submit_button " *ngIf="newMessage.length != 0" ><fa-icon [icon]="faArrowRight" class="text-black-30"></fa-icon></button>
+    <button class="float-right offset-lg-1 text_submit_button"   *ngIf="newMessage.length == 0"><fa-icon [icon]="faArrowLeft" class="text-black-30 "></fa-icon></button>
   </div>
 </div>

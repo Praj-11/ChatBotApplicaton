@@ -1,4 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons';
+// import {faArrowRIght} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chat-layout',
@@ -9,17 +11,17 @@ export class ChatLayoutComponent implements OnInit {
 
   @Input() database: any;
   newMessage: string;
+  faArrowRight = faArrowRight;
 
   @Output() addMessageEvent = new EventEmitter<any>();
+  faArrowLeft = faArrowLeft;
 
   constructor() {
-    console.log(this.database);
     this.newMessage = '';
   }
 
   ngOnInit(): void {
-    console.log(this.database);
-  }
+ }
 
   addMessage() {
     const currentDate = new Date();

@@ -1,3 +1,7 @@
+*{
+  font-family: Courier, Arial;
+}
+
 .chat_button{
   border: 0;
   margin: 0;
@@ -42,12 +46,18 @@
   }
 }
 
+.message{
+  font-size: medium;
+}
+
 .text_bar{
   border-radius: 10px;
   height: 39px;
 }
 
 .text_submit_button{
-
+  border-radius: 30px;
+  background-color: white;
+  height: 35px;
 }
 

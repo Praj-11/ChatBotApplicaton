@@ -1,5 +1,9 @@
-.pageAdjust{
+*{
+  font-family: Helvetica , Arial;
+}
 
+.position-fixed{
+  background-image: linear-gradient(to right bottom, #231f51, white);
 }
 
 .main_layout{
@@ -7,8 +11,8 @@
   /*background-color: #cbbed8;*/
   box-shadow: dimgray;
 
-  border-width: 2px;
-  border-radius: 1px;
+  border-width: 1px;
+  border-radius: 20px;
   border-color: dimgray;
 }
 
@@ -37,6 +41,13 @@
 input[type = 'search']{
   border-radius: 50px;
   height: 30px;
+}
+
+.search_button{
+  height: 30px;
+  border-radius: 30px;
+  background-color: transparent;
+  /*margin-top: 20px;*/
 }
 
 

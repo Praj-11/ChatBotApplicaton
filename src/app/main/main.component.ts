@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as faker from 'faker/locale/en';
+import {faComments} from '@fortawesome/free-solid-svg-icons';
+import {forEachComment} from 'tslint';
 
 @Component({
   selector: 'app-main',
@@ -12,13 +14,14 @@ export class MainComponent implements OnInit {
   userDetails: any;
   chats: any;
   currIndex: number;
+  newPerson = faComments;
+
 
 
   constructor() {
 
     this.userDetails = this.createData();
-
-    console.log(this.userDetails);
+    this.search = '';
   }
 
   ngOnInit(): void {
@@ -26,20 +29,18 @@ export class MainComponent implements OnInit {
 
   createData(){
 
-      let randomNumber = Math.floor(Math.random() * 1000);
 
       const user = {
         userName: faker.fake(faker.name.firstName() + faker.name.lastName()),
-        userPhotoURL: 'https://api.adorable.io/avatars/' + randomNumber,
+        userPhotoURL: 'https://api.adorable.io/avatars/' + faker.random.number(1000),
         chatHistory: []
       };
 
-      for (let i = 0; i < 20; i++) {
-      randomNumber = Math.floor(Math.random() * 1000);
+      for (let i = 0; i < 10; i++) {
 
       const newChat = {
         name: faker.fake(faker.name.firstName() + faker.name.lastName()),
-        photoURL: 'https://api.adorable.io/avatars/' + randomNumber,
+        photoURL: 'https://api.adorable.io/avatars/' + faker.random.number(1000),
         chats: []
       };
       for (let j = 0; j < 10; j++) {
@@ -74,7 +75,6 @@ export class MainComponent implements OnInit {
   addNewMessage(newMessageObject: any){
     this.userDetails.chatHistory[this.currIndex].chats.push(newMessageObject);
     this.addDummyMessage(this.currIndex);
-    console.log(this.userDetails.chatHistory[this.currIndex]);
   }
 
   delay(ms: number) {
@@ -89,5 +89,22 @@ addDummyMessage(index){
 
     this.userDetails.chatHistory[this.currIndex].chats.push(dummyMessage);
 
+  }
+
+  searchOrAdd(){
+    // tslint:disable-next-line:triple-equals
+    if (this.search.length == 0){
+      this.userDetails.chatHistory.unshift({
+        name: faker.fake(faker.name.firstName() + faker.name.lastName()),
+        photoURL: 'https://api.adorable.io/avatars/' + faker.random.number(1000),
+        chats: []
+      });
+    }else {
+      this.userDetails.chatHistory.unshift({
+        name: this.search,
+        photoURL: 'https://api.adorable.io/avatars/' + faker.random.number(1000),
+        chats: []
+      });
+    }
   }
 }
