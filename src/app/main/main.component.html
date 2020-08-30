@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12 bg-primary" style="height: 100vh; width: 100vw;">
+  <div class="d-none d-md-block col-4 col-md-12 bg-primary" style="height: 100vh; width: 100vw;">
     <div class="container col-12 col-md-8 offset-sm-2 mt-sm-5 mb-sm-5 main_layout ">
       <div class="row">
         <div class="card col-1 col-md-4 contacts_bar">
@@ -8,41 +8,69 @@
               <span class="navbar-toggler-icon"></span>
             </button>
           </nav>
-          <div class="collapse navbar-collapse show" id="Navbar">
+          <div class="show" id="Navbar">
             <ul class="navbar-nav">
               <li class="nav-item row">
                 <a class="nav-link card-header w-100">
-                  <img class="card-img img-thumbnail ml-3" src="https://api.adorable.io/avatars/1">
+                  <img class="card-img img-thumbnail ml-3" [src]="userDetails.userProfilePic">
                 </a>
               </li>
               <li class="nav-item row">
                 <input type = "search" placeholder="search" class="w-100 m-2">
               </li>
-              <li class="nav-item row">
-                <div class="card-body">
-                  <ul class="list-group" >
-                    <li class="list-group list-inline" *ngFor="let person of messageDatabase">
-                      <img src="{{person.profilePic}}" class="card-img img-thumbnail list-inline-item col-auto">
-                      <p class="text-left list-inline-item col-6 offset-1 justify-content-center">{{person.name}}</p>
+              <li class="nav-item row mt-0">
+                  <ul class="list-group w-100" >
+                    <li class="list-group-horizontal list-unstyled justify-content-center" *ngFor="let person of userDetails.chatsHistory"><button class="btn chat_button w-100 text-left" (click)="showMessage(person)">
+                      <img src="{{person.profilePic}}" class="card-img img-thumbnail">
+                      <label class="text-left justify-content-center ml-4">{{person.name}}</label></button><br>
                     </li>
                   </ul>
-                </div>
               </li>
             </ul>
           </div>
         </div>
-        <div class="card col-11 col-md-8 chat_layout">
-          <div class="card-header">
-
-          </div>
-          <div class="card-body">
-
-          </div>
-          <div class="card-footer">
-
-          </div>
+        <div class="card col-8 col-md-8 chat_layout">
+          <app-chat-layout [database]="chats"></app-chat-layout>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+<!--<div class="d-block d-md-none">-->
+<!--  <div class="row">-->
+<!--    <div class="card col-4 contacts_bar">-->
+<!--      <nav class="card-header navbar navbar-dark">-->
+<!--        <button class="navbar-toggler bg-dark img-thumbnail" type="button" data-target = "#Navbar" (click)="toggleNavbar()">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--      </nav>-->
+<!--      <div class="collapse navbar-collapse show" [ngClass]="{'show': navbarOpen}">-->
+<!--        <ul class="navbar-nav">-->
+<!--          <li class="nav-item row">-->
+<!--            <a class="nav-link card-header w-100">-->
+<!--              <img class="card-img img-thumbnail ml-3" [src]="userDetails.userProfilePic">-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="nav-item row">-->
+<!--            <input type = "search" placeholder="search" class="w-100 m-2">-->
+<!--          </li>-->
+<!--          <li class="nav-item row mt-0">-->
+<!--            <ul class="list-group w-100" >-->
+<!--              <li class="list-group-horizontal list-unstyled justify-content-center" *ngFor="let person of userDetails.chatsHistory"><button class="btn chat_button w-100 text-left" (click)="showMessage(person)">-->
+<!--                <img src="{{person.profilePic}}" class="card-img img-thumbnail">-->
+<!--                <label class="text-left justify-content-center ml-4">{{person.name}}</label></button><br>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="card col-8 chat_layout ">-->
+<!--      <app-chat-layout [database]="chats"></app-chat-layout>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

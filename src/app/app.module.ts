@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { ChatLayoutComponent } from './chat-layout/chat-layout.component';
+import { MessageBoxComponent } from './message-box/message-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ChatLayoutComponent
+    ChatLayoutComponent,
+    MessageBoxComponent
   ],
   imports: [
     BrowserModule

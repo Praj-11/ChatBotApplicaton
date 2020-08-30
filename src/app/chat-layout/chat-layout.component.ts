@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-chat-layout',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatLayoutComponent implements OnInit {
 
-  constructor() { }
+  @Input() database: any;
+
+  constructor() {
+    console.log(this.database);
+  }
 
   ngOnInit(): void {
+    console.log(this.database);
   }
 
 }
