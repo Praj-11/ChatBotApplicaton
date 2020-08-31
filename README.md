@@ -8,7 +8,7 @@ An angular based responsive chat bot web application which helps user to communi
 
 ### Features
 
-* User can add contact using the contact bar.
+* User can add contacts using the add-contact bar.
 * Keep track of messages send by the user in JSON based object 
 
 ## Development server
