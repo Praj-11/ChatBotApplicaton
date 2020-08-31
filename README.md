@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
+## Description
+
+An angular based responsive chat bot web application which helps user to communicate with their contacts. Uses faker module to derive temprorary fake data.
+
+### Features
+
+* User can add contact using the contact bar.
+* Keep track of messages send by the user in JSON based object 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
